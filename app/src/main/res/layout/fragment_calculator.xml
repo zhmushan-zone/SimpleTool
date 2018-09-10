@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.flexbox.FlexboxLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:flexDirection="column">
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_flexGrow="1">
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_flexGrow="2">
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:flexDirection="column"
+            app:layout_flexGrow="3">
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="7"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"/>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="8"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"/>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="9"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+            </com.google.android.flexbox.FlexboxLayout>
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="4"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"/>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="5"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"/>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="6"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+            </com.google.android.flexbox.FlexboxLayout>
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="1"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"/>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="2"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"/>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="3"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+            </com.google.android.flexbox.FlexboxLayout>
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="."
+                    style="@style/Widget.MaterialComponents.Button.TextButton"/>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="0"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"/>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="="
+                    style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:flexDirection="column"
+            app:layout_flexGrow="1">
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="DEL"
+                style="@style/Widget.MaterialComponents.Button.TextButton"/>
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="÷"
+                style="@style/Widget.MaterialComponents.Button.TextButton"/>
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="×"
+                style="@style/Widget.MaterialComponents.Button.TextButton"/>
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="－"
+                style="@style/Widget.MaterialComponents.Button.TextButton"/>
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="＋"
+                style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+    </com.google.android.flexbox.FlexboxLayout>
+</com.google.android.flexbox.FlexboxLayout>

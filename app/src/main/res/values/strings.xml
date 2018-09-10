@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SimpleTool</string>
+    <string name="calculator">Calculator</string>
+    <string name="converter">Converter</string>
 </resources>
