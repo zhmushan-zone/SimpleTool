@@ -1,11 +1,29 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.MaterialComponents.Light">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MyButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="cornerRadius">0dp</item>
+        <item name="android:textSize">32dp</item>
+    </style>
+
+    <style name="CalculatorInput" parent="Widget.MaterialComponents.TextInputEditText.FilledBox">
+        <item name="android:gravity">right|bottom</item>
+        <item name="android:textSize">64dp</item>
+        <item name="android:background">#00000000</item>
+    </style>
+
+    <style name="CalculatorResult" parent="Widget.MaterialComponents.TextInputEditText.FilledBox">
+        <item name="android:gravity">right|top</item>
+        <item name="android:textSize">32dp</item>
+        <item name="android:enabled">false</item>
+        <item name="android:background">#00000000</item>
     </style>
 
 </resources>
