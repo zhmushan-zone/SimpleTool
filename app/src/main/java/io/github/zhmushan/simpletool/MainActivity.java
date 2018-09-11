@@ -6,9 +6,20 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
+import android.text.InputType;
+import android.util.AttributeSet;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
 
 import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.textfield.TextInputEditText;
+
+import java.lang.reflect.Method;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,7 +28,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        init();
+    }
+
+    void init() {
         registerPages();
+
     }
 
     void registerPages() {
