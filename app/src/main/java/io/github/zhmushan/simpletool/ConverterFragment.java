@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
@@ -51,5 +52,21 @@ public class ConverterFragment extends Fragment {
         final EditText converterInput2 = getActivity().findViewById(R.id.converter_input_2);
         Util.disableKeyboard(converterInput1);
         Util.disableKeyboard(converterInput2);
+
+        final ConverterDialog dialog = new ConverterDialog();
+        Button converterBtn1 = getActivity().findViewById(R.id.converter_btn_1);
+        Button converterBtn2 = getActivity().findViewById(R.id.converter_btn_2);
+        converterBtn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.show(getFragmentManager(), "Dialog");
+            }
+        });
+        converterBtn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.show(getFragmentManager(), "Dialog");
+            }
+        });
     }
 }

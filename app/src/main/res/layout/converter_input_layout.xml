@@ -21,7 +21,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="m"
-                app:icon="@drawable/expand_arrow_24" />
+                app:icon="@drawable/expand_arrow_24"
+                android:id="@+id/converter_btn_1"/>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="wrap_content"
@@ -48,7 +49,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="cm"
-                app:icon="@drawable/expand_arrow_24" />
+                app:icon="@drawable/expand_arrow_24"
+                android:id="@+id/converter_btn_2" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="wrap_content"
