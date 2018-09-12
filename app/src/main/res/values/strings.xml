@@ -2,4 +2,8 @@
     <string name="app_name">SimpleTool</string>
     <string name="calculator">Calculator</string>
     <string name="converter">Converter</string>
+    <string name="length">Length</string>
+    <string name="area">Area</string>
+    <string name="temprature">Temprature</string>
+    <string name="weight">Weight</string>
 </resources>

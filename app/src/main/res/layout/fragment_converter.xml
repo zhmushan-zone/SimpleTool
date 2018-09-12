@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+
+<io.github.zhmushan.simpletool.MyCoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/converter_layout"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="converter"/>
-</LinearLayout>
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:flexDirection="column">
+
+        <include layout="@layout/converter_input_layout" />
+        <include layout="@layout/converter_keyboard" />
+
+    </com.google.android.flexbox.FlexboxLayout>
+    <include layout="@layout/converter_bottom_sheet" />
+</io.github.zhmushan.simpletool.MyCoordinatorLayout>
+
