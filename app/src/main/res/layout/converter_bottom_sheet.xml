@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.flexbox.FlexboxLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_sheet_nav"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:behavior_peekHeight="16dp"
+    app:flexDirection="column"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    tools:showIn="@layout/fragment_converter"
+    android:background="#ffffffff">
+
+    <ImageView
+        android:id="@+id/bottom_sheet_arrow"
+        style="@style/Arrow"
+        android:layout_width="match_parent" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:alignItems="flex_start"
+        app:justifyContent="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:src="@drawable/menu_icon_conversion_length"
+            app:layout_alignSelf="center" />
+
+        <Button
+            style="@style/NavButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/length"
+            app:layout_flexGrow="1" />
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:src="@drawable/menu_icon_conversion_area"
+            app:layout_alignSelf="center" />
+
+        <Button
+            style="@style/NavButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/area"
+            app:layout_flexGrow="1" />
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:src="@drawable/menu_icon_conversion_temprature"
+            app:layout_alignSelf="center" />
+
+        <Button
+            style="@style/NavButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/temprature"
+            app:layout_flexGrow="1" />
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:src="@drawable/menu_icon_conversion_weight"
+            app:layout_alignSelf="center" />
+
+        <Button
+            style="@style/NavButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/weight"
+            app:layout_flexGrow="1" />
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+</com.google.android.flexbox.FlexboxLayout>

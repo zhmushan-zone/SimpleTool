@@ -84,26 +84,8 @@ public class CalculatorFragment extends Fragment implements View.OnClickListener
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        final EditText editText = getActivity().findViewById(R.id.inputTextField);
-        if (android.os.Build.VERSION.SDK_INT <= 10) {
-            editText.setInputType(InputType.TYPE_NULL);
-        } else {
-            Class<EditText> cls = EditText.class;
-            Method method;
-            try {
-                method = cls.getMethod("setShowSoftInputOnFocus", boolean.class);
-                method.setAccessible(true);
-                method.invoke(editText, false);
-            } catch (Exception e) {
-            }
-
-            try {
-                method = cls.getMethod("setSoftInputShownOnFocus", boolean.class);
-                method.setAccessible(true);
-                method.invoke(editText, false);
-            } catch (Exception e) {
-            }
-        }
+        final EditText editText = getActivity().findViewById(R.id.calculator_input);
+        Util.disableKeyboard(editText);
 
     }
 

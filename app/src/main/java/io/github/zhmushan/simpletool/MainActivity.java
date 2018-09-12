@@ -1,25 +1,19 @@
 package io.github.zhmushan.simpletool;
 
+import android.content.Context;
+import android.os.Bundle;
+import android.util.AttributeSet;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.Button;
+
+import com.google.android.material.tabs.TabLayout;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
-
-import android.app.Activity;
-import android.content.Context;
-import android.os.Bundle;
-import android.text.InputType;
-import android.util.AttributeSet;
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.EditText;
-
-import com.google.android.material.tabs.TabLayout;
-import com.google.android.material.textfield.TextInputEditText;
-
-import java.lang.reflect.Method;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
 
     void init() {
         registerPages();
-
     }
 
     void registerPages() {

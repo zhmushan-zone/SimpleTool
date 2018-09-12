@@ -14,10 +14,21 @@
         <item name="android:textSize">32dp</item>
     </style>
 
+    <style name="NavButton" parent="Widget.MaterialComponents.Button.TextButton.IconButton">
+        <item name="cornerRadius">0dp</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="MenuButton" parent="Widget.MaterialComponents.Button.TextButton.IconButton">
+        <item name="cornerRadius">0dp</item>
+        <item name="android:textSize">24dp</item>
+    </style>
+
     <style name="CalculatorInput" parent="Widget.MaterialComponents.TextInputEditText.FilledBox">
         <item name="android:gravity">right|bottom</item>
         <item name="android:textSize">64dp</item>
         <item name="android:background">#00000000</item>
+        <item name="android:inputType">text</item>
     </style>
 
     <style name="CalculatorResult" parent="Widget.MaterialComponents.TextInputEditText.FilledBox">
@@ -25,6 +36,20 @@
         <item name="android:textSize">32dp</item>
         <item name="android:enabled">false</item>
         <item name="android:background">#00000000</item>
+        <item name="android:inputType">text</item>
+    </style>
+
+    <style name="Arrow">
+        <item name="android:src">@drawable/collapse_arrow_24</item>
+        <item name="android:layout_height">16dp</item>
+        <item name="android:background">@color/colorAccent</item>
+    </style>
+
+    <style name="ConverterInput" parent="Widget.MaterialComponents.TextInputEditText.FilledBox">
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:textSize">48dp</item>
+        <item name="android:background">#00000000</item>
+        <item name="android:inputType">text</item>
     </style>
 
 </resources>

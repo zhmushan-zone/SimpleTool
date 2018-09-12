@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.flexbox.FlexboxLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/fragment_converter">
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:flexDirection="column"
+        app:layout_flexGrow="3">
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/MyButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="7" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/MyButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="8" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/MyButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="9" />
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/MyButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="4" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/MyButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="5" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/MyButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="6" />
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/MyButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="1" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/MyButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="2" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/MyButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="3" />
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/MyButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="." />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/MyButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="0" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/MyButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="DEL" />
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+</com.google.android.flexbox.FlexboxLayout>
