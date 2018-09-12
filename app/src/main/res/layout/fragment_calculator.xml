@@ -21,11 +21,11 @@
                 android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/calculator_input"
+                    android:id="@+id/inputTextField"
                     style="@style/CalculatorInput"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="8+1×2" />
+                    android:text="" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -42,9 +42,10 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     style="@style/CalculatorResult"
+                    android:id="@+id/answerTextField"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="10"/>
+                    android:text=""/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -69,18 +70,21 @@
 
                 <com.google.android.material.button.MaterialButton
                     style="@style/MyButton"
+                    android:id="@+id/btn7"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="7" />
 
                 <com.google.android.material.button.MaterialButton
                     style="@style/MyButton"
+                    android:id="@+id/btn8"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="8" />
 
                 <com.google.android.material.button.MaterialButton
                     style="@style/MyButton"
+                    android:id="@+id/btn9"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="9" />
@@ -93,18 +97,21 @@
 
                 <com.google.android.material.button.MaterialButton
                     style="@style/MyButton"
+                    android:id="@+id/btn4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="4" />
 
                 <com.google.android.material.button.MaterialButton
                     style="@style/MyButton"
+                    android:id="@+id/btn5"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="5" />
 
                 <com.google.android.material.button.MaterialButton
                     style="@style/MyButton"
+                    android:id="@+id/btn6"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="6" />
@@ -117,18 +124,21 @@
 
                 <com.google.android.material.button.MaterialButton
                     style="@style/MyButton"
+                    android:id="@+id/btn1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="1" />
 
                 <com.google.android.material.button.MaterialButton
                     style="@style/MyButton"
+                    android:id="@+id/btn2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="2" />
 
                 <com.google.android.material.button.MaterialButton
                     style="@style/MyButton"
+                    android:id="@+id/btn3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="3" />
@@ -141,18 +151,21 @@
 
                 <com.google.android.material.button.MaterialButton
                     style="@style/MyButton"
+                    android:id="@+id/btn_dot"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="." />
 
                 <com.google.android.material.button.MaterialButton
                     style="@style/MyButton"
+                    android:id="@+id/btn0"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="0" />
 
                 <com.google.android.material.button.MaterialButton
                     style="@style/MyButton"
+                    android:id="@+id/btn_equal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="=" />
@@ -169,30 +182,35 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/MyButton"
+                android:id="@+id/button_c"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="DEL" />
 
             <com.google.android.material.button.MaterialButton
                 style="@style/MyButton"
+                android:id="@+id/btn_division"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="÷" />
 
             <com.google.android.material.button.MaterialButton
                 style="@style/MyButton"
+                android:id="@+id/btn_mult"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="×" />
 
             <com.google.android.material.button.MaterialButton
                 style="@style/MyButton"
+                android:id="@+id/btn_minus"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="－" />
 
             <com.google.android.material.button.MaterialButton
                 style="@style/MyButton"
+                android:id="@+id/btn_add"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="＋" />
