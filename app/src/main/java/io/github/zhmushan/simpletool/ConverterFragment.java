@@ -62,19 +62,19 @@ public class ConverterFragment extends Fragment {
         Util.disableKeyboard(converterInput1);
         Util.disableKeyboard(converterInput2);
 
-        Button converterBtn1 = getActivity().findViewById(R.id.converter_btn_1);
-        Button converterBtn2 = getActivity().findViewById(R.id.converter_btn_2);
+        final Button converterBtn1 = getActivity().findViewById(R.id.converter_btn_1);
+        final Button converterBtn2 = getActivity().findViewById(R.id.converter_btn_2);
         converterBtn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ConverterDialog dialog = new ConverterDialog(new String[]{"a", "b"});
+                ConverterDialog dialog = new ConverterDialog(new String[]{"a", "b"}, converterBtn1);
                 dialog.show(getFragmentManager(), "Dialog");
             }
         });
         converterBtn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new ConverterDialog(new String[]{"a", "c", "asdasd"}).show(getFragmentManager(), "Dialog");
+                new ConverterDialog(new String[]{"a", "c", "asdasd"}, converterBtn2).show(getFragmentManager(), "Dialog");
             }
         });
     }

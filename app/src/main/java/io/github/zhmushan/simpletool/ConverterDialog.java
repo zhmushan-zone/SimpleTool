@@ -18,13 +18,15 @@ import androidx.annotation.Nullable;
 public class ConverterDialog extends BottomSheetDialogFragment {
     private String data[];
     private String selected;
+    private View view;
 
     public ConverterDialog() {
     }
 
     @SuppressLint("ValidFragment")
-    public ConverterDialog(String arr[]) {
+    public ConverterDialog(String arr[], View v) {
         data = arr;
+        view = v;
     }
 
     @Nullable
@@ -56,7 +58,7 @@ public class ConverterDialog extends BottomSheetDialogFragment {
     public void onDestroyView() {
         super.onDestroyView();
         if (selected != null) {
-
+            ((Button) view).setText(selected);
         }
     }
 }
