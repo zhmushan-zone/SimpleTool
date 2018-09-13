@@ -8,10 +8,18 @@
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
     <!--<style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">-->
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/redPrimary</item>
+        <!--<item name="colorPrimaryDark">@color/redPrimary</item>-->
+        <!--<item name="colorAccent">@color/redPrimary</item>-->
         <item name="navButton">@style/NavButton</item>
+    </style>
+
+    <style name="GreenTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/greenPrimary</item>
+    </style>
+
+    <style name="BlueTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/bluePrimary</item>
     </style>
 
     <style name="MyButton" parent="Widget.MaterialComponents.Button.TextButton">
@@ -27,6 +35,13 @@
     <style name="MenuButton" parent="Widget.MaterialComponents.Button.TextButton.IconButton">
         <item name="cornerRadius">0dp</item>
         <item name="android:textSize">24dp</item>
+    </style>
+
+    <style name="ThemePickerBtn" parent="Widget.MaterialComponents.Button.IconButton">
+        <item name="android:layout_height">96dp</item>
+        <item name="cornerRadius">0dp</item>
+        <item name="android:layout_marginLeft">36dp</item>
+        <item name="android:layout_marginRight">36dp</item>
     </style>
 
     <style name="CalculatorInput" parent="Widget.MaterialComponents.TextInputEditText.FilledBox">
@@ -47,7 +62,7 @@
     <style name="Arrow">
         <item name="android:src">@drawable/collapse_arrow_24</item>
         <item name="android:layout_height">16dp</item>
-        <item name="android:background">@color/colorAccent</item>
+        <item name="android:background">?attr/colorPrimary</item>
     </style>
 
     <style name="ConverterInput" parent="Widget.MaterialComponents.TextInputEditText.FilledBox">

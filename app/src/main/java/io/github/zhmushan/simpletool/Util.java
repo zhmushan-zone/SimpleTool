@@ -17,6 +17,10 @@ import java.util.List;
 
 public class Util {
 
+    static int themeId = R.style.AppTheme;
+    static boolean bootstrap = false;
+    static int themeBtnId = R.id.red_theme;
+
     static void disableKeyboard(EditText editText) {
         if (android.os.Build.VERSION.SDK_INT <= 10) {
             editText.setInputType(InputType.TYPE_NULL);
@@ -48,5 +52,12 @@ public class Util {
             layout.addView(button);
         }
         return btnList;
+    }
+
+    static void clearChildBtnIcon(ViewGroup viewGroup) {
+        for (int i = 0; i < viewGroup.getChildCount(); i++) {
+            MaterialButton button = (MaterialButton) viewGroup.getChildAt(i);
+            button.setIconResource(0);
+        }
     }
 }
