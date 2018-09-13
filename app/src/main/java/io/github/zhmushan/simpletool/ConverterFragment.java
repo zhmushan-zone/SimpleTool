@@ -1,20 +1,29 @@
 package io.github.zhmushan.simpletool;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ListView;
 
+import com.google.android.flexbox.FlexboxLayout;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.LifecycleObserver;
 
 public class ConverterFragment extends Fragment {
 
@@ -53,19 +62,19 @@ public class ConverterFragment extends Fragment {
         Util.disableKeyboard(converterInput1);
         Util.disableKeyboard(converterInput2);
 
-        final ConverterDialog dialog = new ConverterDialog();
         Button converterBtn1 = getActivity().findViewById(R.id.converter_btn_1);
         Button converterBtn2 = getActivity().findViewById(R.id.converter_btn_2);
         converterBtn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ConverterDialog dialog = new ConverterDialog(new String[]{"a", "b"});
                 dialog.show(getFragmentManager(), "Dialog");
             }
         });
         converterBtn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dialog.show(getFragmentManager(), "Dialog");
+                new ConverterDialog(new String[]{"a", "c", "asdasd"}).show(getFragmentManager(), "Dialog");
             }
         });
     }

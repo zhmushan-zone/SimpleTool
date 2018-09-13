@@ -84,7 +84,7 @@ public class CalculatorFragment extends Fragment implements View.OnClickListener
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        final EditText editText = getActivity().findViewById(R.id.calculator_input);
+        final EditText editText = getActivity().findViewById(R.id.inputTextField);
         Util.disableKeyboard(editText);
 
     }
