@@ -21,6 +21,8 @@ public class ConverterFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
+
         return inflater.inflate(R.layout.fragment_converter, container, false);
     }
 
@@ -30,6 +32,7 @@ public class ConverterFragment extends Fragment {
         final ImageView bottomSheetArrow = getActivity().findViewById(R.id.bottom_sheet_arrow);
 
         final BottomSheetBehavior behavior = BottomSheetBehavior.from(getActivity().findViewById(R.id.bottom_sheet_nav));
+        //调用底部拉动栏
         behavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
             @Override
             public void onStateChanged(@NonNull View view, int i) {
