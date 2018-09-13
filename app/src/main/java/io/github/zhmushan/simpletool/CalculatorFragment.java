@@ -21,9 +21,6 @@ import androidx.fragment.app.Fragment;
 public class CalculatorFragment extends Fragment implements View.OnClickListener {
     private MaterialButton btn0,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn_add,btn_minus,btn_mult,btn_division,button_c,btn_equal,btn_dot;
     private TextInputEditText edtInput,edtAnswer;
-//    private String inputString1,inputString2,outputString,bufString;
-//    private int number1,number2,numberOutput;
-//    private int state,symbol,count;
     boolean clear_flag;
 
     @Nullable
@@ -111,11 +108,11 @@ public class CalculatorFragment extends Fragment implements View.OnClickListener
             case R.id.btn_add:
                 if (clear_flag) {
                     edtInput.setText("");
-//                    edtAnswer.setText("");
+                    edtAnswer.setText("");
                 }
                 clear_flag = false;
-
                 edtInput.setText(String.format("%s%s",edtInput.getText(),((Button)v).getText()));
+                edtInput.setSelection(edtInput.getText().length()); //修改光标位置
                 break;
             case R.id.button_c:
                 edtInput.setText("");
