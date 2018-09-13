@@ -1,9 +1,19 @@
 package io.github.zhmushan.simpletool;
 
+import android.content.Context;
 import android.text.InputType;
+import android.view.ContextThemeWrapper;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+
+import com.google.android.material.button.MaterialButton;
 
 import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Util {
 
@@ -27,5 +37,16 @@ public class Util {
             } catch (Exception e) {
             }
         }
+    }
+
+    static List<Button> createUnitBtnList(Context context, ViewGroup layout, String data[]) {
+        List btnList = new ArrayList<Button>();
+        for (String name : data) {
+            Button button = new MaterialButton(context, null, R.attr.navButton);
+            button.setText(name);
+            btnList.add(button);
+            layout.addView(button);
+        }
+        return btnList;
     }
 }

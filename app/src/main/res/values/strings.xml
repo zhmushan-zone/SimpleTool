@@ -6,4 +6,6 @@
     <string name="area">Area</string>
     <string name="temprature">Temprature</string>
     <string name="weight">Weight</string>
+    <string name="author">201603001章宏彬, 201603027赵安</string>
+    <string name="ok">OK</string>
 </resources>

@@ -1,5 +1,9 @@
 <resources>
 
+    <declare-styleable name="AppTheme">
+        <attr name="navButton" format="reference" />
+    </declare-styleable>
+
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
     <!--<style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">-->
@@ -7,6 +11,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="navButton">@style/NavButton</item>
     </style>
 
     <style name="MyButton" parent="Widget.MaterialComponents.Button.TextButton">
