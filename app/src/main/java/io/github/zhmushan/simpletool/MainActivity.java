@@ -1,12 +1,15 @@
 package io.github.zhmushan.simpletool;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 
@@ -21,19 +24,26 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        initTheme();
         setContentView(R.layout.activity_main);
-
         init();
     }
 
     void init() {
         registerPages();
-        Snackbar.make(findViewById(R.id.main_layout), R.string.author, Snackbar.LENGTH_INDEFINITE).setAction(R.string.ok, new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        if (!Util.bootstrap) {
+            Util.bootstrap = true;
+            Snackbar.make(findViewById(R.id.main_layout), R.string.author, Snackbar.LENGTH_INDEFINITE).setAction(R.string.ok, new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
 
-            }
-        }).show();
+                }
+            }).show();
+        }
+    }
+
+    void initTheme() {
+        setTheme(Util.themeId);
     }
 
     void registerPages() {
@@ -47,13 +57,15 @@ public class MainActivity extends AppCompatActivity {
                         return new CalculatorFragment();
                     case Page.Converter:
                         return new ConverterFragment();
+                    case Page.Theme:
+                        return new ThemeFragment();
                 }
                 return null;
             }
 
             @Override
             public int getCount() {
-                return 2;
+                return 3;
             }
 
             @Nullable
@@ -64,6 +76,8 @@ public class MainActivity extends AppCompatActivity {
                         return getString(R.string.calculator);
                     case Page.Converter:
                         return getString(R.string.converter);
+                    case Page.Theme:
+                        return getString(R.string.theme);
                 }
                 return null;
             }
