@@ -50,17 +50,21 @@ public class ConverterDialog extends BottomSheetDialogFragment {
                 @Override
                 public void onClick(View v) {
                     selected = ((Button) v).getText().toString();
-                    onDestroyView();
+                    dismiss();
                 }
             });
         }
     }
 
     @Override
-    public void onDestroyView() {
-        super.onDestroyView();
+    public void dismiss() {
+        super.dismiss();
         if (selected != null) {
             ((Button) view).setText(selected);
         }
     }
+
+//    public String findSelect() {
+//        return selected;
+//    }
 }
