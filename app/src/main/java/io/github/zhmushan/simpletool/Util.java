@@ -45,12 +45,13 @@ public class Util {
 
     static List<Button> createUnitBtnList(Context context, ViewGroup layout, String data[]) {
         List btnList = new ArrayList<Button>();
-        for (String name : data) {
-            Button button = new MaterialButton(context, null, R.attr.navButton);
-            button.setText(name);
-            btnList.add(button);
-            layout.addView(button);
-        }
+        if (data != null)
+            for (String name : data) {
+                Button button = new MaterialButton(context, null, R.attr.navButton);
+                button.setText(name);
+                btnList.add(button);
+                layout.addView(button);
+            }
         return btnList;
     }
 

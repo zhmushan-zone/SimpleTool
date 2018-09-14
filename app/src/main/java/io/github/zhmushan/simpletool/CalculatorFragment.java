@@ -13,17 +13,15 @@ import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 
 import java.lang.reflect.Method;
+import java.util.regex.Pattern;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.view.ActionBarPolicy;
 import androidx.fragment.app.Fragment;
 
 public class CalculatorFragment extends Fragment implements View.OnClickListener {
-    private MaterialButton btn0,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn_add,btn_minus,btn_mult,btn_division,button_c,btn_equal,btn_dot;
-    private TextInputEditText edtInput,edtAnswer;
-//    private String inputString1,inputString2,outputString,bufString;
-//    private int number1,number2,numberOutput;
-//    private int state,symbol,count;
+    private MaterialButton btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn_add, btn_minus, btn_mult, btn_division, button_c, btn_equal, btn_dot;
+    private TextInputEditText edtInput, edtAnswer;
     boolean clear_flag;
 
     @Nullable
@@ -73,10 +71,6 @@ public class CalculatorFragment extends Fragment implements View.OnClickListener
         clear_flag = false;
 
 
-
-
-
-
 //        return inflater.inflate(R.layout.fragment_calculator, container, false);
         return square;
     }
@@ -111,11 +105,23 @@ public class CalculatorFragment extends Fragment implements View.OnClickListener
             case R.id.btn_add:
                 if (clear_flag) {
                     edtInput.setText("");
-//                    edtAnswer.setText("");
+                    edtAnswer.setText("");
                 }
                 clear_flag = false;
-
-                edtInput.setText(String.format("%s%s",edtInput.getText(),((Button)v).getText()));
+                String text = String.format("%s%s", edtInput.getText(), ((Button) v).getText());
+                if (
+                        text.length() >= 2
+                                && ".".charAt(0) == text.charAt(text.length() - 2)
+                                && ("＋".charAt(0) == text.charAt(text.length() - 1)
+                                || "－".charAt(0) == text.charAt(text.length() - 1)
+                                || "×".charAt(0) == text.charAt(text.length() - 1)
+                                || "÷".charAt(0) == text.charAt(text.length() - 1))
+                        ) break;
+                String regex = "([0-9]+((\\.)?[0-9]*)?[÷×－＋]?)*";
+                boolean isMatch = Pattern.matches(regex, text);
+                if (!isMatch) break;
+                edtInput.setText(text);
+                edtInput.setSelection(edtInput.getText().length()); //修改光标位置
                 break;
             case R.id.button_c:
                 edtInput.setText("");
@@ -123,11 +129,19 @@ public class CalculatorFragment extends Fragment implements View.OnClickListener
                 clear_flag = false;
                 break;
             case R.id.btn_equal:
-                Double ret = 0.0;
-                CalTree cal = new CalTree();
-                ret = cal.start(edtInput.getText().toString());
-                edtAnswer.setText(ret.toString());
-                clear_flag = true;
+                if (!edtInput.getText().toString().equals("") && Pattern.matches("[0-9]+", String.valueOf(edtInput.getText().toString().charAt(edtInput.getText().toString().length() - 1)))) {
+                    Double ret = 0.0;
+                    CalTree cal = new CalTree();
+                    ret = cal.start(edtInput.getText().toString());
+                    if (ret % 1 == 0) {
+                        double getDo = ret;
+                        int ret_int = (int) getDo;
+                        edtAnswer.setText(String.valueOf(ret_int));
+                    } else {
+                        edtAnswer.setText(ret.toString());
+                    }
+                    clear_flag = true;
+                }
                 break;
             default:
                 break;

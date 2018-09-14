@@ -30,6 +30,7 @@
 
         <Button
             style="@style/NavButton"
+            android:id="@+id/btn_len"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="@string/length"
@@ -49,6 +50,7 @@
 
         <Button
             style="@style/NavButton"
+            android:id="@+id/btn_area"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="@string/area"
@@ -68,6 +70,7 @@
 
         <Button
             style="@style/NavButton"
+            android:id="@+id/btn_temp"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="@string/temprature"
@@ -86,6 +89,7 @@
             app:layout_alignSelf="center" />
 
         <Button
+            android:id="@+id/btn_weight"
             style="@style/NavButton"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
