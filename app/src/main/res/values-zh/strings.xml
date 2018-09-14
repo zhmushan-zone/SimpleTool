@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SimpleTool</string>
+    <string name="calculator">计算器</string>
+    <string name="converter">转换器</string>
+    <string name="theme">主题</string>
+    <string name="length">长度</string>
+    <string name="area">面积</string>
+    <string name="temprature">温度</string>
+    <string name="weight">质量</string>
+    <string name="author">201603001章宏彬, 201603027赵安</string>
+    <string name="ok">确定</string>
+</resources>
